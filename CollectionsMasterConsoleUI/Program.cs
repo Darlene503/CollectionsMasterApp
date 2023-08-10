@@ -8,7 +8,9 @@ namespace CollectionsMasterConsoleUI
 {
     class Program
     {
-          static void Main(string[] args)
+        private static object numList;
+
+        static void Main(string[] args)
         {
             //TODO: Follow the steps provided in the comments under each region.
             //Make the console formatted to display each section well
@@ -131,13 +133,18 @@ namespace CollectionsMasterConsoleUI
 
             //TODO: Sort the list then print results
             Console.WriteLine("Sorted Evens!!");
+
+            numList.Sort();
+            NumberPrinter(numList);  
             
             Console.WriteLine("------------------");
 
             //TODO: Convert the list to an array and store that into a variable
-            
+            var myArray = numlist.ToArray();
 
             //TODO: Clear the list
+
+            numlist.Clear();
             
 
             #endregion
@@ -167,12 +174,11 @@ namespace CollectionsMasterConsoleUI
             {
                 if (numberList[i] % 2 != 0)
                 {
-                    numberList.RemoveAT(i);
+                    numberList.RemoveAt(i);
                 } 
                 
             }
-            //var evens = numberList.Where(x => x % 2 != 0); 
-
+         
             NumberPrinter(numberList);
         }
 
